@@ -64,10 +64,10 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
 
-    buttons.buildbutton("Report Group", "https://t.me/Mltb_chat_unofficial")
-    buttons.buildbutton("Repo", "https://github.com/Dawn-India/Z-Mirror")
-    buttons.buildbutton("Mirror Group", "https://t.me/z_mirror")
-    buttons.buildbutton("Owner", "https://t.me/dawn_in")
+    buttons.buildbutton("Report Group", "https://t.me/PriiiiyoS_Mirror")
+    buttons.buildbutton("Repo", "https://github.com/Appeza/tg-mirror-leech-bot")
+    buttons.buildbutton("Mirror Group", "https://t.me/+UMw0Bxh5S945zGMt")
+    buttons.buildbutton("Owner", "https://t.me/iamsmmh")
 
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -169,7 +169,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Z-Mirror-Bot Help',
+        title='TG-Mirror-Leech-Bot Help',
         content=help_string_telegraph,
     )["path"]
 
@@ -236,7 +236,7 @@ botcmds = [
     ]
 
 def main():
-    # bot.set_my_commands(botcmds)
+    bot.set_my_commands(botcmds)
     start_cleanup()
     if INCOMPLETE_TASK_NOTIFIER and DB_URI is not None:
         notifier_dict = DbManger().get_incomplete_tasks()
